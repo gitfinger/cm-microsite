@@ -1,0 +1,84 @@
+ // ==========================================================================
+// Icons
+// ==========================================================================
+
+// Logo  
+
+//.site-logo {
+//	@include img-replace("logo.svg", 115px, 45px, inline-block);
+
+
+// NEW CODE ---REPLACE WITH SVG---
+.site-logo {
+	@include img-replace("logo-small.png", 200px, 34px, inline-block);
+	margin: 20px 0 5px 15px;
+	@include mq(medium) {
+			@include img-replace("logo.png", 350px, 45px, inline-block);
+			margin: 10px 0 10px 10px;
+			}
+
+// NEW CODE ---REPLACE WITH SVG---
+
+// NEW CODE ---CHECK THIS IS DRY---
+	float: left;
+	// margin: em(0px, 0px) 0 0 ;
+
+// NEW CODE ---CHECK THIS IS DRY---	
+
+
+// ---TO BE REMOVED---	
+	border: 0px solid #f00;
+// ---TO BE REMOVED---	
+
+}
+
+
+//Hashtag
+
+.hashtag {
+		@include img-replace("icon-drinkalsace-small.png", 109px, 80px, inline-block);
+		@include mq(medium) {
+			@include img-replace("icon-drinkalsace.png", 186px, 127px, inline-block);
+			}
+		margin: 80px 0 25px 0;
+		float: right;
+		
+}
+
+
+
+// UI
+
+.icn {
+
+	// Nav Toggle
+	@include m(nav-toggle) {
+		@extend %icn--ui;
+		width: 25px;
+		height: 17px;
+		border-top: solid 3px palette(grey);
+		border-bottom: solid 3px palette(grey);
+		position: relative;
+		float: right;
+			// NEW CODE ---CHECK THIS IS DRY---	
+		margin: em(35px, 20px);
+			// NEW CODE ---CHECK THIS IS DRY---	
+		@include p-el(before, 25px, 3px) {
+			background: palette(grey, light);
+			top: 4px;
+		}
+
+		@include mq(medium) {
+		margin: em(40px, 20px);
+		}
+	}
+
+	// Close
+	@include m(close) {
+		@extend %icn--ui;
+		@include img-replace("icn-close.svg", 20px, 20px); 
+		position: absolute;
+		right: 4%;
+		top: 4%;
+	}
+}

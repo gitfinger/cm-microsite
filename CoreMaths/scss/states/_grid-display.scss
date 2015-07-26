@@ -1,0 +1,69 @@
+// ==========================================================================
+// Grid display
+// ==========================================================================
+
+.is-displayed-mobile {
+  @include mq(small) {
+    display: block;
+    @at-root (with: media) {
+      .is-hidden-mobile {
+	display: none;
+      }
+    }
+  }
+  @include mq(medium) { 
+    display: none;
+  }	
+}
+
+
+.is-medium-plus {
+  @include mq(small) {
+    display: none;
+  
+  }
+  @include mq(medium) { 
+    display: block;
+  } 
+//   @include mq(large) { 
+//    display: none;
+//  } 
+}
+
+
+.is-small-only {
+  @include mq(small) {
+    display: block;
+  
+  }
+  @include mq(medium) { 
+    display: none;
+  } 
+   @include mq(large) { 
+    display: none;
+  } 
+}
+
+
+
+
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+.is-large-only {
+  text-align: center;
+  display: none;
+  @include mq(large) {
+      width: auto;
+      display: inline-block;
+      float: right;
+    }
+}
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+
+
+

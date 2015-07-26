@@ -1,0 +1,308 @@
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+// ---CHECK HEADER IS DRY---
+// NEW CODE ---CHECK THIS IS DRY---
+
+html, body {
+	height: 100%;
+}
+
+
+
+body {
+
+
+  	font-size: $base__font-size;
+  	font-family: $font-family--primary;
+  	line-height: ($base__line/$base__font-size);
+}
+
+
+
+header {
+	//position: absolute;
+	top: 0;
+	//z-index: 1;
+	width: 100%;
+	background: rgb(255, 255, 255); /* Fallback */
+	background-color: rgba(255,255,255,0.98);
+	// background-color: palette(grey, xx-light);
+	box-shadow: 0px 5px 3px $color-shadow;
+
+	@include mq(medium) {
+		z-index: 1;
+		position: fixed;
+		background-color: rgba(255,255,255,0.94);
+
+	}
+}
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+// Text
+
+h1 {
+	@extend %hdln-prim;
+}
+
+h2 {
+	@extend %hdln-sec;
+}
+
+h3 {
+
+	@extend %hdln-ter;
+}
+
+
+h4 {
+	margin: em(10px) 0 ;
+	font-weight: $font-weight--bold;
+	font-size: em(16px);
+	color: $color-light;
+ 	line-height: em(24px, 16px);
+
+		@include mq(medium) {
+		margin-top: em(0px);
+		font-size: em(24px);
+	}
+	
+
+	
+	
+}
+
+
+
+h5 {
+
+	margin-top: em(12px);
+	margin-bottom: em(2px);
+
+	letter-spacing: none;
+	font-size: em(16px);
+  	line-height: em(32px, 16px);
+
+	a {
+		color: $color-link;
+		font-weight: $font-weight--ultra-bold;
+		font-size: em(24px);
+  		line-height: em(24px, 24px);
+
+	
+	}
+	a:hover {
+		color: $color-light;
+
+	}
+
+	@include mq(medium) {
+		margin-top: em(4px);
+		font-size: em(20px);
+
+	}
+
+}
+
+
+h6 {
+
+
+
+	font-weight: $font-weight--ultra-bold;
+	font-size: em(16px);
+	margin: em(0px);
+
+	@include mq(medium) {
+	}
+}
+
+
+
+a {
+	color: palette(grey, dark); 
+	text-decoration: none;
+	font-weight: $font-weight--medium;
+	&:hover {
+	color: $color-secondary;
+	text-decoration: underline;
+
+
+	}
+}
+
+
+
+
+
+
+p {
+		color: $color-light;
+	margin: em(10px) 0 em(20px) 0;
+	font-weight: $font-weight--medium;
+	font-size: em(16px);
+	line-height: (20px/16px);
+	 @include mq(medium) {
+		font-weight: $font-weight--light;
+	 	font-size: em(24px);
+		line-height: (36px/24px);
+	 }
+}
+
+blockquote {
+	@include mq(medium) {
+		margin: em(32px, 24px) 0;
+		padding: 0 0 0 5%;
+		border-left: em(8px, 24px) solid palette(grey, xx-light); 
+		font-size: em(24px);
+	}
+	font-weight: $font-weight--light;
+	font-style : italic;
+	font-size : em(20px);
+}
+
+// NEW CODE ---CHECK THIS IS DRY---
+.citation {
+	margin-top: em(0px);
+	margin-bottom: em(36px);
+	color: $grey;
+	font-weight: $font-weight--medium;
+	font-size: em(14px);
+	}
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+.list-divider {
+	padding: 1px 0 0 0;
+	background: palette(grey, x-light);
+	border: none;
+	}
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+hr {
+	
+	border: $color-light solid 1px;
+	margin-top: em(15px);
+	margin-bottom: em(30px);
+
+}
+
+
+
+
+// Images
+
+img {
+
+// NEW CODE ---CHECK THIS IS DRY---
+  //margin-bottom: em(24px);
+
+// NEW CODE ---CHECK THIS IS DRY---
+  max-width: 100%;
+  height: auto;
+
+// NEW CODE ---CHECK THIS IS DRY---
+	vertical-align: bottom;
+	max-width: 100%;
+// NEW CODE ---CHECK THIS IS DRY---
+}
+
+// NEW CODE ---CHECK THIS IS DRY---
+.img-mouseover:hover {
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+.descretionary-margin {
+	margin-bottom: em(15px);
+}
+// NEW CODE ---CHECK THIS IS DRY---
+
+// Form elements
+
+input, 
+textarea {
+	display: block;
+	padding: 15px;
+	width: 100%; 
+	outline: 0;
+	border: 0;
+}
+
+input:focus, 
+textarea:focus {
+	transition: $trns_duration;
+}
+
+// Button
+
+button {
+	outline: 0;
+}
+
+// Footer
+
+footer {
+    background: palette(grey, xx-light);
+
+// ---REMOVE---	//
+//border-top: 4px solid $color-secondary;
+// ---REMOVE---	//
+
+
+	padding-top: 20px;
+  	height: auto;
+  
+  @include bk-splash;
+
+
+font-size: $base__font-size - 3;
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+}
+
+footer.div {
+	margin: 20px 0;
+
+}
+
+

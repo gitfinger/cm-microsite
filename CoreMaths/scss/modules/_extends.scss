@@ -1,0 +1,192 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Nav Items
+
+%nav-item-horz {
+  @include mq(medium) {
+    display: inline-block;
+    margin: em(4px, 5px);
+  }
+}
+
+%nav-item-link {
+  font-weight: $font-weight--bold;
+  text-align: center;
+        // EDITED CODE ---Font was 18px and padding 8/20px---
+  font-size: em(14px);
+  display: block;
+  //padding: em(10px, 0px);
+  padding: px 0 0 0 ;
+
+        // EDITED CODE ---Font was 18px and padding 8/20px---
+
+
+
+  border-bottom: 2px solid transparent;
+  @include mq(small) {
+    border-bottom-color: palette(grey, xx-light);
+    font-weight: $font-weight--bold;
+    padding-top: em(10px);
+    padding-bottom: em(10px);
+    font-size: em(17px);
+  }
+
+
+    // NEW CODE ---CHECK THIS IS DRY---
+ // @include mq(intermed) {
+ // font-size: em(18px);
+ // padding: em(4px, 0px);
+ // }
+
+  @include mq(large) {
+  font-size: em(18px);
+  padding: em(8px, 20px);
+  }
+
+}
+
+
+
+// --- ACTIVE HOVER STATE MAIN MENU + NAV---
+%nav-item-on {
+  color: palette(black);
+  border-color: $color-secondary;
+  text-decoration: none;
+}
+// --- ACTIVE HOVER STATE MAIN MENU + NAV---
+
+
+
+
+// Headlines
+
+%hdln-prim {
+
+// NEW CODE ---CHECK THIS IS DRY---
+  //  color: palette(grey, x-dark);
+  //font-weight: $font-weight--light;
+  //font-size: em(42px);
+  font-size: em(42px);
+  font-weight: $font-weight--medium;
+  margin: 0;
+  color: $white;
+
+  @include mq(medium) {
+    font-size: em(72px);
+    font-weight: $font-weight--light;
+  }
+// NEW CODE ---CHECK THIS IS DRY---
+
+  line-height: (46px/42px);
+  margin-top: 0;
+}
+
+
+
+
+
+
+
+%hdln-sec {
+  color: palette(grey, dark);
+  color: $white;
+  letter-spacing: normal;
+  font-weight: $font-weight--light;
+  font-size: em(30px);
+  line-height: (50px/40px);
+  margin-top: em(2px);
+  margin-bottom: em(2px);
+ @include mq(medium) {
+  font-size: em(60px);
+  line-height: (65px/55px);
+ }
+
+// NEW CODE ---CHECK THIS IS DRY---
+//  font-family: $font-family--secondary;
+  font-family: $font-family--primary;
+// NEW CODE ---CHECK THIS IS DRY---
+
+}
+
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+%hdln-ter {
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+  font-size: em(18px);
+  font-weight: $font-weight--medium;
+  margin-top: em(4px);
+  margin-bottom: em(1px);
+  line-height: em(33px, 30px);
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+//  color: $white;
+  //letter-spacing: $letter-space;
+//  font-weight: $font-weight--medium;
+//  font-size: em(20px);
+//  font-family: $font-family--primary;
+//  margin-top: 5px; 
+
+//    @include mq(medium) {
+//    font-size: em(24px);
+//    font-weight: $font-weight--light;
+//  }
+
+}
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+
+
+
+
+
+
+
+
+
+
+// Buttons
+
+%btn {
+  padding: 15px 30px;
+  border: 0;
+  border-radius : $br--default;
+  color: none;
+  text-transform: uppercase;
+  font-size : em(14px);
+  font-weight: $font-weight--medium;
+  transition: opacity $trns-duration;
+  display: block;
+  &:hover {
+    opacity: .75;
+  }
+  &:active {
+    opacity: initial;
+  }
+}
+
+// Menu link
+
+%menu-link {
+  display: block;
+  padding-top: em(16px);
+  padding-bottom: em(16px);
+  color: $white;
+  text-align: center;
+  text-shadow: 0 1px $color-shadow;
+  font-size: em(18px);
+}
+
+// Icons
+
+%icn--ui {
+	line-height: 0;
+	cursor: pointer;
+}

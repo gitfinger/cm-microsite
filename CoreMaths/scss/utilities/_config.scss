@@ -1,0 +1,128 @@
+// ==========================================================================
+// Global Config
+// ==========================================================================
+
+// Font Stacks
+
+$font-url--google        : 'http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900';
+$font-family--primary    : 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family--secondary  : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100;
+$font-weight--light      : 300;
+$font-weight--medium     : 400;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+// Descriptive Base Colors
+
+$white : #fff;
+$black : #0b0b0b;
+$grey  : #797e83;
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+//$puerto-rico-blue 	: #4fc4b2;
+// $key-lime-green		: #a1d61e;
+//$key-lime-green		: #74a300;
+//$yellow				: #ffe076;
+//$bright-turquoise	: #06F4D7;
+//$golden-fizz		: #fbfd35;
+//$blue-marguerite	: #787ec7;
+//$green-sushi 		: #7FC241;
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+$fountain-blue: 	#4fbabd;
+$persian-green: 	#00aca7;
+$supernova: 		#ffca00;
+$mango-tango:		#e67900;
+$dark-cyan: 		#009182;
+$plum: 				#9d3585;
+
+
+
+
+// Color Usage
+
+$color-dark	 	 : $black;
+$color-light	 : $white;
+$color-primary   : $fountain-blue;
+$color-secondary : $grey;
+$color-link		 : $supernova;
+$color-accent    : $persian-green;
+$color-shadow    : rgba($black, .2);
+$color-01		 : $fountain-blue;
+$color-02		 : $persian-green;
+$color-03		 : $supernova;
+$color-04		 : $mango-tango;
+$color-05		 : $dark-cyan;
+$color-06		 : $plum;
+
+// Color Palette Modifiers
+
+$color-palettes: (
+	grey: (
+		xx-light : lighten($grey, 43%),
+		x-light  : lighten($grey, 35%),
+	  light    : lighten($grey, 12%),
+	  base     : $grey,
+	 	dark     : darken($grey, 8%),
+	 	x-dark   : darken($grey, 16%)
+	),
+	black: (
+		light    : lighten($black, 10%),
+		base     : $black,
+		dark     : darken($black, 10%)
+	)
+);
+
+// UI Colors
+
+$ui-colors: (
+	default : $fountain-blue,
+	success : $persian-green,
+	light 	: $supernova,
+//	warning : palette(grey, x-light),
+	warning : $black,
+
+);
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transitions
+
+$trns-duration  : .3s;
+
+// Path to Assets
+
+$path--rel      : "../img";
+
+// Grid
+
+$g-col-width    : 65px !default;
+$g-gutter-width : 20px !default;
+$g-col-count    : 12 !default;
+$g-cont-max-w   : 1050px !default;
+
+
+
+// Breakpoints
+
+$brkpoint--sm    : 1px;
+$brkpoint--md    : 768px;
+$brkpoint--in	 : 890px;
+$brkpoint--lg    : 1100px;

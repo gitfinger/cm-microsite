@@ -1,0 +1,472 @@
+// ==========================================================================
+// Panels
+// ==========================================================================
+
+
+.slider { position: relative; overflow: auto; }
+    .slider li { list-style: none; }
+        .slider ul li { float: left; }
+
+
+
+
+
+.panel {
+
+	@extend %panel-default;
+	@include m(centered) {
+		@extend %panel-default;
+		@extend %center-align;
+	}
+	@include m(padded) {
+		@extend %panel-padding;
+		@include m(centered) {
+			@extend %center-align;
+			@extend %panel-padding;
+			border: 1px solid #f00;
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+.valign-mid {
+text-align: center;
+margin-top: 3%;
+
+
+}
+
+
+.panel-secondary {
+		
+		
+//		background: $color-secondary;
+//		background: palette(grey, x-light);
+		padding-top: 20px;
+		padding-left: 5px;
+		padding-right: 5px; 
+		padding-bottom: 20px;
+		margin: 0px 0 0px 0; 
+		@extend %panel-padding;
+		color: $white;		
+		max-width: 100%;
+	}
+
+
+
+
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+.splash {
+  text-align: left;
+  background: url(../img/bk02.jpg) $white;
+  padding-top: 100px;
+  height: auto;
+  
+  @include bk-splash;
+
+  
+	text-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+	
+ }
+
+
+
+
+
+
+
+
+@mixin panel-top {
+padding-top: 15px;
+ // height: auto;
+
+   @include mq(medium) {
+	 padding-top: 100px;
+
+ 
+    } 
+
+
+}
+
+@mixin panel-bot {
+padding-bottom: 20px;
+ // height: auto;
+
+   @include mq(medium) {
+	 padding-bottom: 40px;
+
+ 
+    } 
+
+
+}
+
+
+
+
+
+.splash-home {
+  text-align: left;
+    
+  @include bk-splash;
+
+padding-top: 0px;
+  height: auto;
+
+   @include mq(medium) {
+	 padding-top: 0px;
+	 }
+ }
+
+
+
+
+ @include mq(medium) {
+	height: auto;
+ 
+    } 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+//---Consider this as desktop-needs refactoring for mobile---
+.main-panel {	
+	padding: 20px 0;
+}
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+.home-panel-02 {
+width: 100%;	
+background-color: palette(grey, xx-light);
+}
+
+// NEW CODE ---CHECK THIS IS DRY---
+
+
+
+.footer-links {
+	float:none;
+	padding-top: em(30px);
+	display: inline-block;
+//	width: 100%;
+	text-align: left;
+	padding-right: em(30px);
+//border: 1px solid #f00;
+
+		@include mq(medium) {
+			padding-top: em(30px);
+			float:right;
+		}
+
+}
+
+.link-icons {
+		@extend .footer-links;
+		text-align: center;
+//border: 1px solid #f00;
+		
+	}
+
+
+.imagelist li{
+            padding:0;
+            margin-top: em(10px);
+            margin-bottom: em(10px);
+}
+
+
+
+
+.panel-spacing {
+	
+		margin: em(20px) 0;
+		@include mq(medium) {
+			margin: em(10px) 0;
+		}
+
+}
+
+
+centered-spacing {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+
+
+
+}
+
+
+
+.full {
+
+	min-height: 100%;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	height: auto;
+}
+
+
+#pane01 {
+	background-color: $color-01;
+	background: url(../img/bk-01.jpg);
+	  @include bk-splash;
+ 		@include panel-top;
+
+}
+#pane02 {
+	background-color: $color-01;
+ 	@include panel-top;
+	@include panel-bot;
+}
+#pane03 {
+	background-color: $color-02;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+#pane03a {
+	background-color: $color-02;
+
+ 	@include panel-bot;
+}
+
+#pane04 {
+	background-color: $color-01;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+#pane05 {
+	background-color: $color-02;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+#pane06 {
+	background-color: $color-01;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+#pane07 {
+	background-color: $color-02;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+#pane08 {
+	background-color: $color-01;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+
+#pane09 {
+	background-color: $color-02;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+#pane10 {
+	background-color: $color-01;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+#pane11 {
+	background-color: $color-02;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+#pane12 {
+	background-color: $color-01;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+
+#pane13 {
+	background-color: $color-04;
+ 	//@include panel-top;
+ 	@include panel-bot;
+
+
+	padding-top: 10px;
+   	@include mq(medium) {
+	 padding-top: 30px;
+    } 
+
+
+}
+
+
+#pane14 {
+	background-color: $color-03;
+ 	@include panel-top;
+ 	@include panel-bot;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slide-musician {
+//	background-color: $color-02;
+	background: url(../img/bk-musician.png);
+	  @include bk-splash;
+@include panel-top;
+@include panel-bot;
+//	 height: auto;
+//	 border: 1px solid #f00;
+// min-height: 100%;
+
+
+ }
+
+
+
+.slide-chef {
+	//background-color: $color-01;
+	background: url(../img/bk-chef.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+
+
+.slide-interiordesigner {
+	//background-color: $color-01;
+	background: url(../img/bk-interiordesigner.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+.slide-psychologist {
+	//background-color: $color-01;
+	background: url(../img/bk-psychologist.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+ 
+
+.slide-forensicsexpert {
+	//background-color: $color-01;
+	background: url(../img/bk-forensicsexpert.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+
+.slide-artist {
+	//background-color: $color-01;
+	background: url(../img/bk-artist.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+.slide-landscapegardner {
+	//background-color: $color-01;
+	background: url(../img/bk-landscapegardner.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+.slide-vlogger {
+	//background-color: $color-01;
+	background: url(../img/bk-vlogger.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+
+
+.slide-weatherforecaster {
+	//background-color: $color-01;
+	background: url(../img/bk-weatherforecaster.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+
+
+
+.slide-fashiondesigner {
+	//background-color: $color-01;
+	background: url(../img/bk-fashiondesigner.png);
+	  @include bk-splash;
+ //		@include panel-top;
+ 	@include panel-bot;
+//	 height: auto;
+}
+
+
+
+
+
+
+
